@@ -34,3 +34,10 @@ type ConsumerQueues struct {
 	GatewayStatuses chan *GatewayStatus
 	RxPackets       chan *RxPacket
 }
+
+type Statistics struct {
+	DevAddr        []byte `json:"devaddr"`
+	FCntUP         uint16  
+	Lost_packets   uint16
+	Time	       time.Time
+}
