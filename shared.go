@@ -35,7 +35,7 @@ type ConsumerQueues struct {
 	RxPackets       chan *RxPacket
 }
 
-type Statistics struct {
+type DevStats struct {
 	DevAddr        []byte `json:"devaddr"`
 	FCntUP         uint16  
 	Lost_packets   uint16
