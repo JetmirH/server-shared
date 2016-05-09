@@ -33,6 +33,7 @@ type RxPacket struct {
 type ConsumerQueues struct {
 	GatewayStatuses chan *GatewayStatus
 	RxPackets       chan *RxPacket
+	DevStats        chan *DevStats
 }
 
 type DevStats struct {
