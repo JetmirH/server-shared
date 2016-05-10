@@ -30,15 +30,15 @@ type RxPacket struct {
 	Data       string    `json:"data,omitempty"`
 }
 
-type ConsumerQueues struct {
-	GatewayStatuses chan *GatewayStatus
-	RxPackets       chan *RxPacket
-	DevStats        chan *DevStats
-}
-
 type DevStats struct {
 	DevAddr        []byte `json:"devaddr"`
 	FCntUP         uint16  
 	Lost_packets   uint16
 	Time	       time.Time
+}
+
+type ConsumerQueues struct {
+	GatewayStatuses chan *GatewayStatus
+	RxPackets       chan *RxPacket
+	DevStats        chan *DevStats
 }
